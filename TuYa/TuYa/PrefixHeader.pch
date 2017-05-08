@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  TuYa
+//
+//  Created by 朱辉 on 2017/4/21.
+//  Copyright © 2017年 jxx. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+#import "WDPactureView.h"
+#import "UILabel+creat.h"
+#import "WDSliderView.h"
+#import "WDDrawPictureModel.h"
+
+
+#define WS(weakSelf)         __weak __typeof(&*self)weakSelf = self;
+
+
+#define DLog(x, ...)         NSLog(@"%s-line# %d: " x, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define RGB(r,g,b)           [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RECT(x,y,w,h)        CGRectMake(x, y, w, h);
+#define MAX_Y(view,a)        CGRectGetMaxY(view) + a
+#define MAX_X(view,a)        CGRectGetMaxX(view) + a
+
+#define ScreenHeight         [[UIScreen mainScreen] bounds].size.height
+#define ScreenWidth          [[UIScreen mainScreen] bounds].size.width
+
+#define getPointX(x)         ScreenWidth*x/750
+#define getPointY(y)         ScreenHeight*y/1334
+#define IntToString(x)       [NSString stringWithFormat:@"%ld",x]
+
+#define KUIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+
+#endif /* PrefixHeader_pch */
