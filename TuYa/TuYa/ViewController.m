@@ -21,6 +21,7 @@
     [super viewDidLoad];
 
     [self creatView];
+    NSLog(@"子怡在此,谁敢哔哔,哈哈哈");
 }
 
 -(void)creatView
